@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
     CLI::App app{"App description"};
-    argv = app.ensure_utf8(argv);
+    // argv = app.ensure_utf8(argv);
 
     std::string filename = "default";
     app.add_option("-f,--file", filename, "A help string");
