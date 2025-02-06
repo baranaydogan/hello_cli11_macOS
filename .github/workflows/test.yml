@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  test_macOS:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+
+    - name: Run test script
+      shell: bash
+      run: sh test_macOS.sh
+
