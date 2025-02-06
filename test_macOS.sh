@@ -11,7 +11,7 @@ fi
 export PATH="${llvm_prefix}/bin:$PATH"
 export LDFLAGS="-L${llvm_prefix}/lib"
 
-${llvm_prefix}/bin/clang++ main.hpp -o helloCLI11
+${llvm_prefix}/bin/clang++ main.cpp -o helloCLI11
 
 chmod +x helloCLI11
 
